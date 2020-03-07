@@ -2,21 +2,21 @@ package main
 
 import (
 	"github.com/astaxie/beego"
+	"github.com/sh4869221b/beego_app/controller"
 	"github.com/sh4869221b/beego_app/filters"
 )
 
-type MainController struct {
+type mainController struct {
 	beego.Controller
 }
 
-func (this *MainController) Get() {
-
-	this.Ctx.WriteString("hello world")
+func (controller *mainController) Get() {
+	controller.Ctx.WriteString("hello world")
 }
 
 func main() {
-
-	beego.Router("/", &MainController{})
+	beego.Router("/", &mainController{})
+	beego.Router("/list", &controller.ListController{})
 	beego.InsertFilter("/*", beego.BeforeRouter, filters.LogManager)
 	beego.Run()
 }

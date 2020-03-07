@@ -22,7 +22,7 @@ func getUrls(urls []string) string {
 	var lists = ""
 	for _, url := range urls {
 		resp, err := http.Get(url)
-		if err != nil {
+		if er != nil {
 			continue
 		}
 		defer resp.Body.Close()

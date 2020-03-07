@@ -11,7 +11,6 @@ RUN go build -o app main.go
 
 # Runtime Container
 FROM alpine
-RUN apk add --no-cache ca-certificates
 COPY --from=builder /go/src/app/app /app
 EXPOSE 8080
 ENTRYPOINT ["/app"]

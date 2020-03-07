@@ -54,4 +54,6 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 *.code-workspace
 
+.devcontainer
+
 

@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/astaxie/beego"
+	"github.com/sh4869221b/beego_app/controller"
 	"github.com/sh4869221b/beego_app/filters"
 )
 
@@ -15,6 +16,7 @@ func (controller *mainController) Get() {
 
 func main() {
 	beego.Router("/", &mainController{})
+	beego.Router("/list", &controller.ListController{})
 	beego.InsertFilter("/*", beego.BeforeRouter, filters.LogManager)
 	beego.Run()
 }

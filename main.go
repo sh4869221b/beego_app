@@ -11,12 +11,12 @@ type mainController struct {
 }
 
 func (controller *mainController) Get() {
-	controller.Ctx.WriteString("hello world")
+	controller.Ctx.WriteString("hello world!!")
 }
 
 func main() {
 	beego.Router("/", &mainController{})
-	beego.Router("/list", &controller.ListController{})
+	beego.Router("/list.txt", &controller.ListController{})
 	beego.InsertFilter("/*", beego.BeforeRouter, filters.LogManager)
 	beego.Run()
 }

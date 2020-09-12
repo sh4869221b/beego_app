@@ -11,7 +11,7 @@ type mainController struct {
 }
 
 func (controller *mainController) Get() {
-	controller.Ctx.WriteString("hello world")
+	controller.Ctx.WriteString("hello world!!")
 }
 
 func main() {

@@ -5,7 +5,12 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - main: .
+  builds:
+  - goos: # default では linux と darwin だけだけど windows 用のバイナリも作るようにしてみる
+      - linux
+      - darwin
+      - windows
+    main: .
     binary: beego-app
     ldflags:
       - -s -w

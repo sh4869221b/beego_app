@@ -15,6 +15,7 @@ type ListController struct {
 // Get is return urls text
 func (controller *ListController) Get() {
 	urls := []string{"https://280blocker.net/files/280blocker_adblock.txt", "https://raw.githubusercontent.com/nanj-adguard/nanj-filter/master/nanj-filter.txt", "https://blog-imgs-116-origin.fc2.com/b/t/o/btonews/5ch_matome_filter.txt", "https://raw.githubusercontent.com/tofukko/filter/master/Adblock_Plus_list.txt"}
+	controller.Ctx.Output.ContentType("text/plain")
 	controller.Ctx.WriteString(getUrls(urls))
 }
 

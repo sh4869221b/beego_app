@@ -16,7 +16,7 @@ func (controller *mainController) Get() {
 
 func main() {
 	beego.Router("/", &mainController{})
-	beego.Router("/list", &controller.ListController{})
+	beego.Router("/list.txt", &controller.ListController{})
 	beego.InsertFilter("/*", beego.BeforeRouter, filters.LogManager)
 	beego.Run()
 }

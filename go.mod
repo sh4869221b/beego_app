@@ -3,7 +3,7 @@ module github.com/sh4869221b/beego_app
 go 1.14
 
 require (
-	github.com/astaxie/beego v1.12.2
+	github.com/astaxie/beego v1.12.3
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
 	golang.org/x/crypto v0.0.0-20200302210943-78000ba7a073 // indirect
